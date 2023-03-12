@@ -4,4 +4,4 @@ resource "aws_internet_gateway" "main-gateway" {
   tags = {
     Name= "main-gateway"
   }
-}
+} 
