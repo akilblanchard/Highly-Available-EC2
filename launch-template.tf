@@ -1,4 +1,4 @@
-#Launch Template to create instances upon for asg
+#Launch Template to create instances for asg
 resource "aws_launch_template" "launch_template" {
 
   name = "launch_template"
