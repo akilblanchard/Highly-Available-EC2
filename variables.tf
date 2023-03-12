@@ -22,10 +22,10 @@ variable "ssh_private_key" {
 
 variable "subnets_cidr" {
   description = "cidr values for 3 public subnets"
-  type = list
+  type        = list(any)
 }
 
 variable "azs" {
   description = "Availability Zones vpc will span"
-  type = list
+  type        = list(any)
 }

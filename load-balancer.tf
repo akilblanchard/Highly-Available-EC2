@@ -5,7 +5,7 @@ resource "aws_lb" "my_balancer" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.my_security.id]
-  subnets            = element(aws_subnet.public.*.id,count.index)
+  subnets            = element(aws_subnet.public.*.id, count.index)
 }
 
 

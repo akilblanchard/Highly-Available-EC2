@@ -1,9 +1,9 @@
 #Virtual Private Cloud component
 resource "aws_vpc" "main_vpc" {
-    cidr_block = var.main_vpc
+  cidr_block = var.main_vpc
 
 
-tags = {
+  tags = {
     name = "app-vpc"
- }
+  }
 }
