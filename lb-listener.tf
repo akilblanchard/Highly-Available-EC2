@@ -1,6 +1,6 @@
 #listner ports for load balancer
 
-resource "aws_lb_listener" "lb_listener" {
+resource "aws_lb_listener" "my_balancer" {
   load_balancer_arn = aws_lb.my_balancer.arn
   port              = "80"
   protocol          = "Http"
