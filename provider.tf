@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region                  = "us-east-1a"
+  region                  = "us-east-1"
   shared_credentials_file = "/Users/killy/.aws/credentials"
   profile                 = "ablanchard"
 
