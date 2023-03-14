@@ -19,13 +19,3 @@ variable "ssh_private_key" {
   description = "pem file of Keypair we used to login to EC2 instances"
   type        = string
 }
-
-variable "subnets_cidr" {
-  description = "cidr values for 3 public subnets"
-  type        = list(any)
-}
-
-variable "azs" {
-  description = "Availability Zones vpc will span"
-  type        = list(any)
-}
