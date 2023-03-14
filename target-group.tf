@@ -4,5 +4,5 @@ resource "aws_lb_target_group" "target_g" {
   target_type = "instance"
   port        = 80
   protocol    = "HTTP"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = aws_vpc.main_vpc.id
 }
