@@ -1,12 +1,31 @@
 #Three public subnets in Three different Availability zones
 
-resource "subnet" "public_subnet" {
-  count             = length(var.subnets_cidr)
+resource "aws_subnet" "public_a" {
   vpc_id            = aws_vpc.main_vpc.id
-  cidr_block        = element(var.subnets_cidr, count.index)
-  availability_zone = element(var.subnets_cidr, count.index)
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "us-east-1a"
 
-  tahs = {
-    Name = "Subnet-${count.index + 1}"
+  tags = {
+    Name = "public_a"
+  }
+}
+
+resource "aws_subnet" "public_b" {
+  vpc_id            = aws_vpc.main_vpc.id
+  cidr_block        = "10.0.2.0/24"
+  availability_zone = "us-east-1b"
+
+  tags = {
+    Name = "public_b"
+  }
+}
+
+resource "aws_subnet" "public_c" {
+  vpc_id            = aws_vpc.main_vpc.id
+  cidr_block        = "10.0.3.0/24"
+  availability_zone = "us-east-1c"
+
+  tags = {
+    Name = "public_c"
   }
 }
