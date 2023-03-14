@@ -2,7 +2,7 @@
 
 resource "aws_security_group" "my_security" {
   name   = "my-secuirty"
-  vpc_id = aws_vpc.main.id
+  vpc_id = aws_vpc.main_vpc.id
 
   ingress {
     description = "Allow all http"
@@ -20,7 +20,7 @@ resource "aws_security_group" "my_security" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  ingress {
+  egress {
     description = "Allow outgoing traffic"
     from_port   = 0
     to_port     = 0
